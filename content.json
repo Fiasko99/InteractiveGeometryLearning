@@ -1,0 +1,291 @@
+{
+  "geometry": {
+    "module": "graphic_controllers",
+    "Тема 1": {
+      "controller": "ThemeOneController",
+      "theory": [
+        "<h1> Hi im html tag </h1><p>H1 my baby</h1>",
+        "'p ex1_1.jpg",
+        "Второй абзац",
+        "'p ex1_1.jpg"
+      ],
+      "first_example": {
+        "3d": false,
+        "theory": ["<h1>Hi</h1>", "'p ex1_1.jpg", "Абзац 2", "'p ex1_1.jpg"],
+        "code": "import math\n\nimport numpy as np\n\nfrom .abstract_controllers import AbstractGraphicsController\n\n__all__ = [\"ThemeOneController\"]\n\n\nclass ThemeOneController(AbstractGraphicsController):\n    @staticmethod\n    def _get_generator(\n        task_one_x_start=0, task_one_x_end=10, coefficient_deviation=1, upper=0\n    ):\n        x = np.arange(task_one_x_start, task_one_x_end + 1)\n        y = coefficient_deviation * x + upper\n        return x, y\n\n    def draw_first_example(self, *args, **kwargs):\n        points = self._get_generator(**kwargs)\n        x1, x2 = points[0][0], points[0][-1]\n        y1, y2 = points[1][0], points[1][-1]\n\n        # TODO: Исправить nan в вычислениии большого числа\n        self.axes.plot(\n            *points,\n            label=f\"d={np.sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2))}\",\n        )\n        self.axes.legend(loc=\"best\")\n\n    def draw_second_example(self, *args, **kwargs):\n        k1 = 0\n        k2 = kwargs[\"coefficient_deviation\"]\n        denominator = 1 + k1 * k2\n\n        angle = 90 if denominator == 0 else math.atan((k2 - k1) / denominator)\n\n        self.axes.plot(\n            *self._get_generator(**kwargs),\n            label=f\"angle={round(math.degrees(angle), 1)}\",\n        )\n        self.axes.set_ylim([0, 20])\n        self.axes.legend(loc=\"best\")\n",
+        "args": {
+          "task_one_x_start": 0,
+          "task_one_x_end": 10,
+          "coefficient_deviation": 1,
+          "upper": 0
+        }
+      },
+      "second_example": {
+        "3d": false,
+        "theory": ["Абзац 1", "'p ex1_1.jpg", "Абзац 2", "'p ex1_1.jpg"],
+        "code": "",
+        "args": {
+          "coefficient_deviation": 1
+        }
+      },
+      "practice": {
+        "theory": [
+          "Первый абзац практики",
+          "'p ex1_1.jpg",
+          "Второй абзац",
+          "'p ex1_1.jpg"
+        ]
+      }
+    },
+    "Тема 2": {
+      "controller": "ThemeTwoController",
+      "theory": [
+        "Первый абзац",
+        "'p ex1_1.jpg",
+        "Второй абзац",
+        "'p ex1_1.jpg"
+      ],
+      "first_example": {
+        "3d": false,
+        "theory": [],
+        "code": "",
+        "args": {
+          "x": 1,
+          "y": 1
+        }
+      },
+      "second_example": {
+        "3d": false,
+        "theory": [],
+        "code": "",
+        "args": {}
+      },
+      "practice": {
+        "theory": [
+          "Первый абзац практики",
+          "'p ex1_1.jpg",
+          "Второй абзац",
+          "'p ex1_1.jpg"
+        ]
+      }
+    },
+    "Тема 3": {
+      "controller": "ThemeThreeController",
+      "theory": [
+        "Первый абзац",
+        "'p ex1_1.jpg",
+        "Второй абзац",
+        "'p ex1_1.jpg"
+      ],
+      "first_example": {
+        "3d": false,
+        "theory": [],
+        "code": "",
+        "args": {
+          "x1": 0,
+          "y1": 3,
+          "x2": 4,
+          "y2": 0,
+          "x3": 0,
+          "y3": 0
+        }
+      },
+      "second_example": {
+        "3d": false,
+        "theory": [],
+        "code": "",
+        "args": {}
+      },
+      "practice": {
+        "theory": [
+          "Первый абзац практики",
+          "'p ex1_1.jpg",
+          "Второй абзац",
+          "'p ex1_1.jpg"
+        ]
+      }
+    },
+    "Тема 4": {
+      "controller": "ThemeFourController",
+      "theory": [
+        "Первый абзац",
+        "'p ex1_1.jpg",
+        "Второй абзац",
+        "'p ex1_1.jpg"
+      ],
+      "first_example": {
+        "3d": true,
+        "theory": [],
+        "code": "",
+        "args": {
+          "height": 10
+        }
+      },
+      "second_example": {
+        "3d": true,
+        "theory": [],
+        "code": "",
+        "args": {
+          "x": 10,
+          "y": 5,
+          "z": 20
+        }
+      },
+      "practice": {
+        "theory": [
+          "Первый абзац практики",
+          "'p ex1_1.jpg",
+          "Второй абзац",
+          "'p ex1_1.jpg"
+        ]
+      }
+    },
+    "Тема 5": {
+      "controller": "ThemeFiveController",
+      "theory": [
+        "Первый абзац",
+        "'p ex1_1.jpg",
+        "Второй абзац",
+        "'p ex1_1.jpg"
+      ],
+      "first_example": {
+        "3d": true,
+        "theory": [],
+        "code": "",
+        "args": {
+          "height": 10,
+          "volume": 30
+        }
+      },
+      "second_example": {
+        "3d": true,
+        "theory": [],
+        "code": "",
+        "args": {
+          "radius": 5,
+          "rib_length": 10
+        }
+      },
+      "practice": {
+        "theory": [
+          "Первый абзац практики",
+          "'p ex1_1.jpg",
+          "Второй абзац",
+          "'p ex1_1.jpg"
+        ]
+      }
+    },
+    "Тема 6": {
+      "controller": "ThemeSixController",
+      "theory": [
+        "Первый абзац",
+        "'p ex1_1.jpg",
+        "Второй абзац",
+        "'p ex1_1.jpg"
+      ],
+      "first_example": {
+        "3d": true,
+        "theory": [],
+        "code": "",
+        "args": {
+          "height": 10,
+          "radius": 5
+        }
+      },
+      "second_example": {
+        "3d": true,
+        "theory": [],
+        "code": "",
+        "args": {
+          "height": 10,
+          "radius": 5
+        }
+      },
+      "practice": {
+        "theory": [
+          "Первый абзац практики",
+          "'p ex1_1.jpg",
+          "Второй абзац",
+          "'p ex1_1.jpg"
+        ]
+      }
+    }
+  },
+  "matrix": {
+    "module": "matrix_controllers",
+    "Тема 1": {
+      "controller": "ThemeOneController",
+      "theory": [
+        "Первый абзац матриц",
+        "'p ex1_1.jpg",
+        "Второй абзац",
+        "'p ex1_1.jpg"
+      ],
+      "first_example": {
+        "theory": [
+          "Первый абзац матриц",
+          "'p ex1_1.jpg",
+          "Второй абзац",
+          "'p ex1_1.jpg"
+        ],
+        "code": "",
+        "count_matrix": 3
+      },
+      "second_example": {
+        "theory": [
+          "Первый абзац матриц",
+          "'p ex1_1.jpg",
+          "Второй абзац",
+          "'p ex1_1.jpg"
+        ],
+        "code": "",
+        "count_matrix": 2
+      },
+      "practice": {
+        "theory": [
+          "Первый абзац практики",
+          "'p ex1_1.jpg",
+          "Второй абзац",
+          "'p ex1_1.jpg"
+        ]
+      }
+    },
+    "Тема 2": {
+      "controller": "ThemeTwoController",
+      "theory": [
+        "Первый абзац",
+        "'p ex1_1.jpg",
+        "Второй абзац",
+        "'p ex1_1.jpg"
+      ],
+      "first_example": {
+        "theory": [
+          "Первый абзац матриц",
+          "'p ex1_1.jpg",
+          "Второй абзац",
+          "'p ex1_1.jpg"
+        ],
+        "code": "",
+        "count_matrix": 2
+      },
+      "second_example": {
+        "theory": [
+          "Первый абзац матриц",
+          "'p ex1_1.jpg",
+          "Второй абзац",
+          "'p ex1_1.jpg"
+        ],
+        "code": "",
+        "count_matrix": 2
+      },
+      "practice": {
+        "theory": [
+          "Первый абзац практики",
+          "'p ex1_1.jpg",
+          "Второй абзац",
+          "'p ex1_1.jpg"
+        ]
+      }
+    }
+  }
+}

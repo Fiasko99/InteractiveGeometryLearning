@@ -1,0 +1,33 @@
+# Format code.
+autoflake==1.4
+isort==5.8.0
+black==21.4b1
+docformatter==1.4
+add-trailing-comma==2.1.0
+# Linters.
+flake8==3.9.2
+mypy==0.902
+safety==1.10.3
+bandit==1.7.0
+# GUI.
+PyQt5==5.15.4
+PyQt5-stubs==5.15.2.0
+# Plots.
+matplotlib==3.2.2
+# Requests.
+requests==2.25.1
+# Builders.
+pyinstaller==4.0
+pyinstaller-hooks-contrib==2020.8
+# Security.
+itsdangerous==2.0.1
+MarkupSafe==2.0.1
+# Yaml configuration.
+PyYAML==5.4.1
+# Plot.
+matplotlib==3.2.2
+# Math.
+scipy==1.6.3
+numpy==1.20.3
+# Enviroment variables.
+python-dotenv==0.17.1

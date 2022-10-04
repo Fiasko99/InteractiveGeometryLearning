@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>spa_app</class>
+ <widget class="QMainWindow" name="spa_app">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1057</width>
+    <height>791</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="content_window">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <widget class="QWidget" name="pages_group" native="true">
+      <property name="styleSheet">
+       <string notr="true">QWidget {
+	background: #2b2e4a ;
+	border: none;
+	color: white;
+	font-size: 20px;
+	font-weight: 900;
+}</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="home_page">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	border-radius: 4px;
+}
+
+
+QPushButton:hover {
+	background: #903749;
+}
+
+QPushButton:pressed {
+	background: #e84545;
+}</string>
+         </property>
+         <property name="text">
+          <string>Главная</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="geometry_page">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	border-radius: 4px;
+}
+
+
+QPushButton:hover {
+	background: #903749;
+}
+
+QPushButton:pressed {
+	background: #e84545;
+}</string>
+         </property>
+         <property name="text">
+          <string>Геометрия</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="matrix_page">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	border-radius: 4px;
+}
+
+
+QPushButton:hover {
+	background: #903749;
+}
+
+QPushButton:pressed {
+	background: #e84545;
+}</string>
+         </property>
+         <property name="text">
+          <string>Матрицы</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTreeView" name="theme_section">
+      <property name="maximumSize">
+       <size>
+        <width>260</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTreeView {
+	background: #2b2e4a ;
+	border: none;
+	color: white;
+	font-size: 20px;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QWidget" name="content_frame" native="true">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QWidget" name="theme_options" native="true">
+         <property name="styleSheet">
+          <string notr="true">QWidget {
+	background: #2b2e4a ;
+	border: none;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="treory_btn">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	border-radius: 4px;
+}
+
+
+QPushButton:hover {
+	background: #903749;
+}
+
+QPushButton:pressed {
+	background: #e84545;
+}</string>
+            </property>
+            <property name="text">
+             <string>Теория</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="second_exmple_btn">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	border-radius: 4px;
+}
+
+
+QPushButton:hover {
+	background: #903749;
+}
+
+QPushButton:pressed {
+	background: #e84545;
+}</string>
+            </property>
+            <property name="text">
+             <string>Пример 1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="first_example_btn">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	border-radius: 4px;
+}
+
+
+QPushButton:hover {
+	background: #903749;
+}
+
+QPushButton:pressed {
+	background: #e84545;
+}</string>
+            </property>
+            <property name="text">
+             <string>Пример 2</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="practice_btn">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	border-radius: 4px;
+}
+
+
+QPushButton:hover {
+	background: #903749;
+}
+
+QPushButton:pressed {
+	background: #e84545;
+}</string>
+            </property>
+            <property name="text">
+             <string>Практика</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QScrollArea" name="content_scroll_area">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>753</width>
+            <height>664</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
